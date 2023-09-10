@@ -35,7 +35,7 @@ const FooterPart = () => {
               beat
               style={{ marginRight: "5px" }}
             />
-            Northstar@gmail.com
+            titanic_noreply@gmail.com
           </a>
         </div>
         <div className={classes.FooterDet}>
