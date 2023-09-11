@@ -1,10 +1,11 @@
 .header {
   font-size: 21px;
   margin: 28px;
-  border: black;
-  padding: 8px;
+  border: 1px solid black;
+  padding: 11px;
   border-radius: 11px;
-  background: #e3e6e6;
+  border: 2px solid #fff;
+  color: #fff;
 }
 .headerCont {
   display: flex;
@@ -22,6 +23,7 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
+  color: #fff;
 }
 
 .user {
@@ -32,9 +34,9 @@
 }
 .btn:hover {
   cursor: pointer;
-
-  box-shadow: inset -10em 0 0 0 #000, inset 10em 0 0 0 #000;
-  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: inset -10em 0 0 0 #fff, inset 10em 0 0 0 #fff;
+  color: #000;
 }
 .btn:active {
   color: red;

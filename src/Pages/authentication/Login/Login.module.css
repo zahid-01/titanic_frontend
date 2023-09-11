@@ -1,9 +1,10 @@
 .container {
   border-radius: 8px;
   padding: 18px;
-  background: #e3e3e3;
+  border: 2px solid #000;
   margin-top: 30%;
   height: auto;
+  color: #fff;
   box-shadow: 0 0 18px 0 rgba(255, 255, 255, 0.3);
 }
 .mainDiv {
@@ -24,7 +25,7 @@ h3 {
   margin-bottom: 41px;
   font-size: 31px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
 }
 .user {
   margin-bottom: 21px;
@@ -32,18 +33,17 @@ h3 {
 .user label,
 .userPass label {
   font-size: 28px;
-
-  color: #000;
+  color: #fff;
 }
 .user input {
   border: transparent;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
 
   font-size: 18px;
 }
 .userPass input {
   border: transparent;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
 
   font-size: 18px;
 }
@@ -51,13 +51,12 @@ h3 {
   margin-bottom: 21px;
 }
 .btn {
-  border: 1px solid #000;
+  border: 1px solid #fff;
   background: none;
   padding: 12px 24px;
   font-size: 18px;
   font-weight: 700;
   border-radius: 8px;
-  color: #000;
   cursor: pointer;
   transition: all 0.4s ease-in;
 }
@@ -70,7 +69,7 @@ h3 {
   top: 55%;
 }
 .btn:hover {
-  box-shadow: inset -10em 0 0 0 #000, inset 10em 0 0 0 #000;
+  box-shadow: inset -10em 0 0 0 red, inset 10em 0 0 0 red;
   color: #fff;
 }
 

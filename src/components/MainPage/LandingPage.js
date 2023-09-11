@@ -3,7 +3,7 @@ import { Suspense, useState } from "react";
 
 import classes from "./LandingPage.module.css";
 import Carousel from "../Header/Carousel";
-import { SliderData } from "../Header/SliderData";
+
 import Filter from "./Filter";
 import axios from "axios";
 import Testimonial from "./Testimonial";
@@ -30,7 +30,7 @@ const LandingPage = () => {
         </div>
       }
     >
-      <Carousel slides={SliderData} />
+      <Carousel />
       <Filter filter={categoryDisplay} />
       <MotionComponent>
         <div className={classes.landingCont}>
@@ -45,7 +45,7 @@ const LandingPage = () => {
       </MotionComponent>
 
       <Testimonial />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </Suspense>
   );
 };

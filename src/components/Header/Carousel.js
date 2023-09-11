@@ -1,50 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./Carousel.module.css";
-import { SliderData } from "./SliderData";
-const Carousel = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import img1 from "../../Assets/Imgs/img1.jpeg";
+import img2 from "../../Assets/Imgs/img2.jpeg";
+import img3 from "../../Assets/Imgs/img3.jpeg";
+import img4 from "../../Assets/Imgs/img4.jpeg";
+import img5 from "../../Assets/Imgs/img5.jpeg";
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  });
-  const length = slides.length;
-
-  const nextSlide = () => {
-    setCurrent((prevCurrent) =>
-      prevCurrent === length - 1 ? 0 : prevCurrent + 1
-    );
+const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
+  const SliderData = [
+    {
+      image: img1,
+    },
+    {
+      image: img2,
+    },
+    {
+      image: img3,
+    },
+    {
+      image: img4,
+    },
+    {
+      image: img5,
+    },
+  ];
   return (
-    <section className={classes.slider}>
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? classes.slideAct : classes.slide}
-            key={index}
-            style={{
-              transform: `translateX(-${(index - current) * 100}%)`,
-              transition: "transform 1.5s ease-in-out",
-            }}
-          >
-            {index === current && (
-              <img
-                src={slide.image}
-                alt="travel img"
-                className={classes.image}
-              />
-            )}
-          </div>
-        );
-      })}
-    </section>
+    <div className={classes.slider}>
+      <Slider {...settings}>
+        {SliderData.map((img, idx) => (
+          <img
+            key={idx.image}
+            src={img.image}
+            alt={`img-${idx}`}
+            className={classes.slide}
+          />
+        ))}
+      </Slider>
+    </div>
   );
 };
 export default Carousel;

@@ -1,53 +1,41 @@
+/* Carousel.module.css */
+
 .slider {
-  position: relative;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
   overflow: hidden;
-  box-shadow: 0 1px 8px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid #fff;
 }
 
 .slide {
-  flex: 0 0 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: auto;
+  height: 60vh;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  object-fit: fill;
+/* Media queries for different screen sizes */
+@media screen and (max-width: 34em) {
+  .slider {
+    width: auto;
+  }
+  .slide {
+    object-fit: cover;
+  }
 }
 
-.slideAct {
-  flex: 0 0 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+@media screen and (max-width: 44em) {
+  .slider {
+    width: auto;
+  }
+  .slide {
+    object-fit: cover;
+  }
 }
 
-.slideAct img {
-  width: 100vw;
-  height: 40vh;
-  object-fit: cover;
-}
-
-.slide:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.slide .caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+@media screen and (max-width: 59em) {
+  .slider {
+    width: auto;
+  }
 }

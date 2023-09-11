@@ -1,13 +1,13 @@
 body {
   background: rgb(2, 0, 36);
   text-align: center;
-  color: #000;
+  /* color: #000; */
 }
 .container {
   border-radius: 8px;
   padding: 18px 20px 48px 20px;
   margin: 10%;
-  background: rgb(227, 230, 230);
+  border: 2px solid #fff;
   width: auto;
   height: auto;
 }
@@ -33,17 +33,17 @@ h3 {
 
 .btn {
   border: 1px solid #000;
-  padding: 12px 24px;
+  padding: 18px 24px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 8px;
   color: #000;
   cursor: pointer;
   transition: all 0.4s ease-in;
-  background: #e3e6e6;
+  background: #fff;
 }
 .btn:hover {
-  box-shadow: inset -10em 0 0 0 #000, inset 10em 0 0 0 #000;
+  box-shadow: inset -10em 0 0 0 green, inset 10em 0 0 0 green;
   color: #fff;
 }
 .signup {
@@ -56,8 +56,10 @@ h3 {
 form input {
   border: transparent;
   outline: none;
-  background: none;
-  border-bottom: 1px solid #000;
+  background: white;
+  border-bottom: 1px solid #fff;
+  padding: 12px;
+  border-radius: 8px;
   margin-bottom: 24px;
   font-size: 18px;
 }
@@ -65,6 +67,7 @@ form label {
   font-size: 18px;
   padding: 8px;
   font-size: 21px;
+  color: #fff;
 }
 form ::placeholder {
   font-size: 18px;
@@ -76,6 +79,9 @@ form ::placeholder {
 .eye {
   position: absolute;
   left: auto;
+  top: 50%;
+  color: #fff;
+  background: #000;
 }
 /* ******media queries********** */
 @media (max-width: 59em) {

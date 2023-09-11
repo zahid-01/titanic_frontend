@@ -13,18 +13,19 @@
 }
 
 .form {
-  background: #e6e3e3;
+  /* background: #e6e3e3; */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
   padding: 14px;
   border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(255, 255, 255, 0.3);
 }
 .dropdown {
   border: 1px solid #000;
-  background: #e6e3e3;
-  color: #000;
+  background: #000;
+  color: #fff;
   font-size: inherit;
   border-radius: 8px;
   padding: 7px 14px;
@@ -33,6 +34,7 @@
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  border: 1px solid #fff;
 }
 .formGroup {
   margin-bottom: 10px;
