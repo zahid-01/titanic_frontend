@@ -22,6 +22,7 @@
   }
   .slide {
     object-fit: cover;
+    height: 40vh;
   }
 }
 
@@ -30,6 +31,7 @@
     width: auto;
   }
   .slide {
+    height: 40vh;
     object-fit: cover;
   }
 }
