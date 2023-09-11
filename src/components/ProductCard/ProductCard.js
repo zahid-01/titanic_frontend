@@ -2,8 +2,6 @@ import { NavLink } from "react-router-dom";
 import classes from "./ProductCard.module.css";
 import MotionComponent from "../Header/Animation";
 const ProductCard = ({ products, filterValue }) => {
-  console.log(filterValue);
-
   if (filterValue)
     return products.map((el) => {
       if (el.productCategory === filterValue)
