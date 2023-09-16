@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useDispatch } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
@@ -20,6 +20,7 @@ import "./App.css";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 
+import FooterPart from "./components/Footer/FooterPart";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
@@ -100,9 +101,18 @@ function App() {
     checkLoginState();
   }, [dispatch]);
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Suspense
+      fallback={
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="loader animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-green-900"></div>
+        </div>
+      }
+    >
+      <>
+        <RouterProvider router={router} />
+        <FooterPart />
+      </>
+    </Suspense>
   );
 }
 
