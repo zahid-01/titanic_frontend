@@ -32,7 +32,7 @@ const Checkout = () => {
   return (
     <>
       <div className="container mx-auto p-4 md:p-6 lg:p-8 xl:p-10">
-        <div className="bg-white flex flex-col shadow-md shadow-blue-300 p-4 justify-center md:p-6 lg:p-8 xl:p-10 rounded-lg">
+        <div className="bg-zinc-200 flex flex-col shadow-md shadow-blue-300 p-4 justify-center md:p-6 lg:p-8 xl:p-10 rounded-lg">
           <h2 className="text-4xl text-blue-600 text-center font-semibold mb-8">
             Delivery
           </h2>
@@ -68,7 +68,7 @@ const Checkout = () => {
         </div>
       </div>
       <div className="p-4 md:p-6 lg:p-8 xl:p-10">
-        <div className="bg-white shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
+        <div className="bg-zinc-200 shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">Summary</h2>
           <div className="space-y-2">
             <div className="flex justify-between">
@@ -99,7 +99,7 @@ const Checkout = () => {
         </div>
       </div>
       <div className="p-4 md:p-6 lg:p-8 xl:p-10">
-        <div className="bg-white shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
+        <div className="bg-zinc-200 shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
           <div className="text-center">
             <button
               onClick={checkOutHandler.bind(product._id)}

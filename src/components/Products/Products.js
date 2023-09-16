@@ -27,7 +27,7 @@ const Product = (props) => {
   return (
     <MotionComponent>
       <div className="container flex flex-col md:h-[80vh] mx-auto py-6 justify-center ">
-        <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg shadow-blue-300 ">
+        <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg shadow-blue-300 bg-zinc-200">
           <div className="md:w-1/2 md:mr-8 p-4">
             <img
               src={images[currentImage]}

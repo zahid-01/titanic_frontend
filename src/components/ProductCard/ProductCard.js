@@ -16,9 +16,9 @@ const ProductCard = ({ products, filterValue }) => {
             to={`product/${el._id}`}
           >
             <MotionComponent>
-              <div className="h-full bg-white rounded-lg shadow-lg shadow-blue-300 hover:translate-y-[-8px] hover:duration-500">
+              <div className="h-full rounded-lg shadow-lg shadow-blue-300 hover:translate-y-[-8px] hover:duration-500">
                 <img
-                  className="w-96 h-96 md:h-64 object-scale-down rounded-t-md shadow-md shadow-zinc-300"
+                  className="w-96 h-96 md:h-64 object-scale-down rounded-t-md shadow-sm shadow-green-300"
                   src={el.images[0]}
                   alt="product img"
                 />
