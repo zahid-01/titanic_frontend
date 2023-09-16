@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./Carousel.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -11,7 +10,7 @@ import img5 from "../../Assets/Imgs/img5.jpeg";
 
 const Carousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -37,14 +36,14 @@ const Carousel = () => {
     },
   ];
   return (
-    <div className={classes.slider}>
+    <div className="container p-6 mx-auto">
       <Slider {...settings}>
         {SliderData.map((img, idx) => (
           <img
-            key={idx.image}
+            key={img.image}
             src={img.image}
             alt={`img-${idx}`}
-            className={classes.slide}
+            className="w-full h-96 lg:h-[70vh] object-scale-down"
           />
         ))}
       </Slider>
