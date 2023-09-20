@@ -27,6 +27,7 @@ const Navbar = () => {
         if (res.data.status === "Success") {
           dispatch(loginSliceActions.setLogin(false));
           dispatch(loginSliceActions.setUserInfo(null));
+          navigate("/");
         }
       })
       .catch((e) => {
