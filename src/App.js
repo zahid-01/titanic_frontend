@@ -104,7 +104,7 @@ function App() {
     <Suspense
       fallback={
         <div className="flex justify-center items-center min-h-screen">
-          <div className="loader animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-green-900"></div>
+          <div className="loader animate-spin rounded-full h-32 w-32 border-t-8 border-b-8 border-green-900"></div>
         </div>
       }
     >
