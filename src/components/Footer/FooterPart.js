@@ -9,7 +9,7 @@ import {
 const FooterPart = () => {
   return (
     <>
-      <div className="py-8">
+      <div className="py-8 border-t-2 border-black ">
         <div className="container flex flex-col gap-4 md:flex-row justify-between items-center px-4">
           <a href="/">
             <img alt="Logo" src={logo} className="w-16 h-16 md:w-32 md:h-20" />

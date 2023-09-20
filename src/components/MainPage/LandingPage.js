@@ -1,7 +1,6 @@
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { useState } from "react";
-import Carousel from "../Header/Carousel";
-import { SliderData } from "../Header/SliderData";
+
 import Filter from "./Filter";
 import axios from "axios";
 import Testimonial from "./Testimonial";
@@ -10,6 +9,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import ContactForm from "./Contact";
 import MotionComponent from "../Header/Animation";
 import NewsletterSection from "./Subscribe";
+import HeroSection from "./Hero";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
@@ -21,10 +21,13 @@ const LandingPage = () => {
 
   return (
     <>
-      <Carousel slides={SliderData} />
+      <HeroSection />
       <Filter filter={categoryDisplay} />
       <MotionComponent>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 border-b-4">
+        <div
+          id="loader"
+          className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 border-b-4"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <Await resolve={product}>
               {({ products }) => (

@@ -5,6 +5,8 @@ import axios from "axios";
 import { loginSliceActions } from "../../Store/loginSlice";
 import { URL } from "../../Assets/environment/url";
 import logo from "../../Assets/Imgs/titanic-logo-3653E95B5B-seeklogo.com.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -31,10 +33,10 @@ const Navbar = () => {
         alert("Oops, something went wrong!");
       });
   };
-
+  // sticky top-0 z-50
   return (
     <div
-      className={`backdrop-blur-md p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-lg shadow-blue-200`}
+      className={`backdrop-blur-md p-2 md:p-4 lg:p-6  shadow-md shadow-blue-200`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
@@ -64,6 +66,12 @@ const Navbar = () => {
                 className="text-black hover:underline font-semibold"
               >
                 My Orders
+              </NavLink>
+              <NavLink
+                to="myOrders"
+                className="text-black hover:underline font-semibold"
+              >
+                Cart
               </NavLink>
             </>
           )}
@@ -107,7 +115,11 @@ const Navbar = () => {
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
           >
-            {isMobileMenuOpen ? "✕" : "☰"}
+            {isMobileMenuOpen ? (
+              <FontAwesomeIcon icon={faClose} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
           </button>
         </div>
       </div>
@@ -130,6 +142,12 @@ const Navbar = () => {
                   className="text-center text-black block hover:underline font-semibold"
                 >
                   My Orders
+                </NavLink>
+                <NavLink
+                  to="myOrders"
+                  className="text-center text-black block hover:underline font-semibold"
+                >
+                  Cart
                 </NavLink>
               </>
             )}
