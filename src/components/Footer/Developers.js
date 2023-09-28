@@ -11,7 +11,14 @@ const DeveloperProfiles = () => {
       name: "Zahid Hussain Khan",
       position: "Full Stack Developer",
       image: img,
-      skills: ["React", "Node.js", "JavaScript", "MongoDB"],
+      skills: [
+        "React",
+        "Node.js",
+        "Java",
+        "JavaScript",
+        "MongoDB",
+        "Spring Boot",
+      ],
       bio: "I am a passionate full-stack developer with expertise in React, Node.js, and JavaScript. I enjoy building scalable web applications.",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/zahidhkhan/",
@@ -24,7 +31,14 @@ const DeveloperProfiles = () => {
       name: "Basit Bashir",
       position: "Frontend Developer",
       image: img2,
-      skills: ["HTML", "CSS", "JavaScript", "React"],
+      skills: [
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "Framer Motion",
+        "JavaScript",
+        "React",
+      ],
       bio: "I'm a creative frontend developer with a strong background in HTML, CSS, and JavaScript. I love creating responsive and user-friendly web interfaces.",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/basit-bashir-6b732b204/",
