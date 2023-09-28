@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="p-22 absolute inset-0 bg-black opacity-50"></div>
 
       <div className="container mx-auto text-center relative z-10 flex flex-col gap-6">
-        <h1 className="text-2xl lg:text-6xl font-extrabold leading-tight text-opacity-90 mb-4">
+        <h1 className="text-2xl lg:text-6xl font-bold lg:font-extrabold leading-tight text-opacity-70 mb-4">
           Discover the Magic of
           <span className="text-orange-500 tracking-[3px] shadow-md shadow-white ml-4 rounded-xl">
             {" "}
