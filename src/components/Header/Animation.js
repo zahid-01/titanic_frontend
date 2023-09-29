@@ -30,9 +30,9 @@ const MotionComponent = ({ children }) => {
   useEffect(() => {
     if (isVisible) {
       controls.start({
-        y: 0,
+        x: 0,
         opacity: 1,
-        transition: { duration: 1, type: "easeout", stiffness: 300 },
+        transition: { duration: 2, type: "easeinout", stiffness: 300 },
       });
     }
   }, [isVisible, controls]);
@@ -40,7 +40,7 @@ const MotionComponent = ({ children }) => {
   return (
     <motion.div
       ref={motionRef}
-      initial={{ y: 100, opacity: 0 }}
+      initial={{ x: 100, opacity: 0 }}
       animate={controls}
     >
       {children}
