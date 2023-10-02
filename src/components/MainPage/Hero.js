@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="container mx-auto text-center relative z-10 tracking-[1px]">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 ">
+        <h1 className="text-3xl md:text-6xl font-bold leading-tight mb-4 ">
           Discover the Magic of{" "}
           <span className="bg-transparent lg:p-3 shadow-md shadow-white rounded-xl text-orange-500 ">
             TITANIC SERVICES
