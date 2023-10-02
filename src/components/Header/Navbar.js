@@ -48,7 +48,7 @@ const Navbar = () => {
             onClick={() => navigate("/")}
           />
         </div>
-        <h2 className="text-blue-500 ml-2 text-xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
+        <h2 className="text-orange-900 ml-2 text-xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
           Titanic Services
         </h2>
         <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 lg:space-x-6">
