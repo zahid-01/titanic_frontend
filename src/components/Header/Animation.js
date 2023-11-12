@@ -32,7 +32,7 @@ const MotionComponent = ({ children }) => {
       controls.start({
         x: 0,
         opacity: 1,
-        transition: { duration: 2, type: "easeinout", stiffness: 300 },
+        transition: { duration: 1, type: "easeinout", stiffness: 300 },
       });
     }
   }, [isVisible, controls]);
