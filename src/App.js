@@ -19,8 +19,8 @@ import { loginSliceActions } from "./Store/loginSlice";
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
-
 import FooterPart from "./components/Footer/FooterPart";
+
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
@@ -110,6 +110,7 @@ function App() {
     >
       <>
         <RouterProvider router={router} />
+
         <FooterPart />
       </>
     </Suspense>

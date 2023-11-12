@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -147,12 +147,9 @@ const Login = () => {
             </div>
             <p className="text-center mt-4 text-gray-600 text-sm">
               Don't have an account?{" "}
-              <a
-                href="www.jknorthstar.com"
-                className="hover:text-black tracking-[1px]"
-              >
+              <NavLink to="/signUp" className="hover:text-black tracking-[1px]">
                 Create one here
-              </a>
+              </NavLink>
             </p>
           </form>
         </div>
