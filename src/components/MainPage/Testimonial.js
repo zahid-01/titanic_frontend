@@ -1,74 +1,111 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import MotionComponent from "../Header/Animation";
-import img1 from "../../Assets/Imgs/p1.jpeg";
-import img2 from "../../Assets/Imgs/p2.jpeg";
-import img3 from "../../Assets/Imgs/p3.jpeg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faKissWinkHeart } from "@fortawesome/free-regular-svg-icons";
 
 const Testimonial = () => {
-  const testimonials = [
-    {
-      imageSrc: img1,
-      altText: "Testimonial 1",
-      name: "Basit",
-      text: "The laptop exceeded my expectations with its lightning-fast performance, sleek design, and impressive battery life. A game-changer for productivity!",
-    },
-    {
-      imageSrc: img2,
-      altText: "Testimonial 2",
-      name: "Mateen",
-      text: "The printer delivers exceptional print quality, fast printing speed, and hassle-free connectivity. A reliable companion for all my printing needs!",
-    },
-    {
-      imageSrc: img3,
-      altText: "Testimonial 3",
-      name: "Zahid",
-      text: "The photocopier's sharp and vibrant reproductions, user-friendly interface, and efficient functionality make it an invaluable asset for my business. Highly recommended!",
-    },
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
   return (
     <MotionComponent>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-semibold mt-6 mb-4">
-        Testimonials
-      </h2>
-      <div className="bg-zinc-200 max-w-4xl mx-auto p-4 md:p-6 lg:p-8 xl:p-10">
-        <Slider {...settings}>
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="text-center">
-              <img
-                src={testimonial.imageSrc}
-                alt={testimonial.altText}
-                className="rounded-full w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mx-auto mb-4"
-              />
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-2">
-                {testimonial.name}
-                <FontAwesomeIcon
-                  icon={faKissWinkHeart}
-                  style={{ marginLeft: "5px" }}
+      <section class="bg-white">
+        <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <h2 class="text-center text-4xl font-bold  text-gray-900 sm:text-5xl">
+            Read trusted reviews from our customers
+          </h2>
+
+          <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-12">
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Man"
+                  src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                  class="h-14 w-14 rounded-full object-cover"
                 />
+
+                <div>
+                  <div class="flex justify-center gap-1 text-green-500">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">
+                    Paul Starr
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-4 text-gray-700">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
+                quia obcaecati neque quibusdam eius accusamus error officiis
+                atque voluptates magnam!
               </p>
-              <p className="text-base md:text-lg lg:text-xl text-gray-600">
-                {testimonial.text}
+            </blockquote>
+
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Man"
+                  src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                  class="h-14 w-14 rounded-full object-cover"
+                />
+
+                <div>
+                  <div class="flex justify-center gap-1 text-green-500">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">
+                    Paul Starr
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-4 text-gray-700">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
+                quia obcaecati neque quibusdam eius accusamus error officiis
+                atque voluptates magnam!
               </p>
-            </div>
-          ))}
-        </Slider>
-      </div>
+            </blockquote>
+
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Man"
+                  src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                  class="h-14 w-14 rounded-full object-cover"
+                />
+
+                <div>
+                  <div class="flex justify-center gap-1 text-green-500">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">
+                    Paul Starr
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-4 text-gray-700">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
+                quia obcaecati neque quibusdam eius accusamus error officiis
+                atque voluptates magnam!
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
     </MotionComponent>
   );
 };
