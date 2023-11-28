@@ -32,7 +32,7 @@ const Product = (props) => {
             <img
               src={images[currentImage]}
               alt={`img ${currentImage + 1}`}
-              className="w-auto h-64 mx-auto md:w-auto md:h-auto rounded-lg"
+              className="w-auto h-64 mx-auto md:w-2/3 md:h-auto rounded-lg"
             />
             <div className="flex justify-center mt-4">
               <button

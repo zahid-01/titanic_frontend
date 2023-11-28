@@ -33,7 +33,9 @@ const ProductUpload = () => {
       headers: { "Content-Type": "multipart/form-data" },
     }).catch((e) => console.log(e));
 
+    console.log(res);
     if (res.statusText === "OK") {
+      console.log(res);
       setStatusMessage("Added product successfully");
       setTimeout(() => {
         setStatusMessage("");
@@ -69,7 +71,7 @@ const ProductUpload = () => {
         <div className="mb-4">
           <label className="block mb-1">Product Code:</label>
           <input
-            type="text"
+            type="number"
             value={productCode}
             onChange={(e) => setProductCode(e.target.value)}
             className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
@@ -78,7 +80,7 @@ const ProductUpload = () => {
         <div className="mb-4">
           <label className="block mb-1">Product Price:</label>
           <input
-            type="text"
+            type="number"
             value={productPrice}
             onChange={(e) => setProductPrice(e.target.value)}
             className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
@@ -94,8 +96,10 @@ const ProductUpload = () => {
             >
               <option value="monitors">Monitors</option>
               <option value="printers">Printers</option>
+              <option value="photocopiers">PhotoCopiers</option>
               <option value="all-in-one">All-in-one</option>
               <option value="laptops">Laptops</option>
+              <option value="tv">TV's</option>
               <option value="accessories">Accessories</option>
             </select>
           </div>
@@ -106,11 +110,14 @@ const ProductUpload = () => {
               onChange={(e) => setProductBrand(e.target.value)}
               value={productBrand}
             >
-              <option value="HP">HP</option>
-              <option value="Dell">Dell</option>
-              <option value="Samsung">Samsung</option>
+              <option value="hp">HP</option>
+              <option value="dell">Dell</option>
+              <option value="sony">Sony</option>
               <option value="lenovo">Lenovo</option>
-              <option value="acer">Acer</option>
+              <option value="pantum">Pantum</option>
+              <option value="sharp">Sharp</option>
+              <option value="mepl">MEPL</option>
+              <option value="others">Others</option>
             </select>
           </div>
         </div>
@@ -129,7 +136,9 @@ const ProductUpload = () => {
             accept="image/*"
             name="images"
             multiple
-            onChange={(e) => setProductImages(e.target.files)}
+            onChange={(e) => {
+              setProductImages(e.target.files);
+            }}
             className="border border-gray-300 py-2 px-3 w-full"
           />
         </div>

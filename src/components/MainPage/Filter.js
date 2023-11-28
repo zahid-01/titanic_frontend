@@ -27,8 +27,10 @@ const Filter = (props) => {
           >
             <option value="monitors">Monitors</option>
             <option value="printers">Printers</option>
+            <option value="photocopiers">PhotoCopiers</option>
             <option value="all-in-one">All-in-one</option>
             <option value="laptops">Laptops</option>
+            <option value="tv">TV's</option>
             <option value="accessories">Accessories</option>
           </select>
           <button
