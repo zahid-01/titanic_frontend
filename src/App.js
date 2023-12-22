@@ -20,6 +20,9 @@ import "./App.css";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 import FooterPart from "./components/Footer/FooterPart";
+import RefundPolicy from "./components/Footer/Refund";
+import ShippingPolicy from "./components/Footer/Shipping";
+import ReturnPolicy from "./components/Footer/Return";
 
 axios.defaults.withCredentials = true;
 
@@ -72,6 +75,18 @@ const router = createBrowserRouter([
       {
         path: "/developer",
         element: <DeveloperProfiles />,
+      },
+      {
+        path: "/refund",
+        element: <RefundPolicy />,
+      },
+      {
+        path: "/shipping",
+        element: <ShippingPolicy />,
+      },
+      {
+        path: "/return",
+        element: <ReturnPolicy />,
       },
     ],
   },

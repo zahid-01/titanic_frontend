@@ -1,6 +1,12 @@
 import logo from "../../Assets/Imgs/titanic-logo-3653E95B5B-seeklogo.com.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleUp, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowCircleUp,
+  faEnvelope,
+  faHeart,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { animateScroll as scroll } from "react-scroll";
 
 const FooterPart = () => {
@@ -19,8 +25,7 @@ const FooterPart = () => {
               </div>
 
               <p class="mt-4 max-w-xs text-gray-500">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                non cupiditate quae nam molestias.
+                Where Quality meets Excellence
               </p>
 
               <ul class="mt-8 flex gap-6">
@@ -71,76 +76,48 @@ const FooterPart = () => {
             </div>
 
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-              <div className="tracking-wider">
-                <p class="font-bold text-gray-900">Services</p>
+              <div className="tracking-wider col-span-2">
+                <p class="font-bold text-gray-900">Address</p>
 
                 <ul class="mt-6 space-y-4 text-md">
                   <li>
+                    <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
                     <a
                       href="/"
                       class="text-gray-700 transition hover:opacity-75"
                     >
-                      Company Review
+                      Mir Mall opposite District Police Lines
+                      <br />
+                      Balgarden Karannagar Srinagar J&K
                     </a>
                   </li>
 
                   <li>
+                    <FontAwesomeIcon icon={faPhone} className="mr-2" beat />
                     <a
-                      href="/"
+                      href="tel:9419421934"
                       class="text-gray-700 transition hover:opacity-75"
                     >
-                      Accounts Review
+                      9419421934
+                    </a>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faPhone} className="mr-2" beat />
+                    <a
+                      href="tel:7006701866"
+                      class="text-gray-700 transition hover:opacity-75"
+                    >
+                      7006701866
                     </a>
                   </li>
 
                   <li>
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" beat />{" "}
                     <a
-                      href="/"
+                      href="mailto:titanicservicessgr@gmail.com"
                       class="text-gray-700 transition hover:opacity-75"
                     >
-                      HR Consulting
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      class="text-gray-700 transition hover:opacity-75"
-                    >
-                      SEO Optimisation
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="tracking-wider">
-                <p class="font-bold text-gray-900">Company</p>
-
-                <ul class="mt-6 space-y-4 text-md">
-                  <li>
-                    <a
-                      href="/"
-                      class="text-gray-700 transition hover:opacity-75"
-                    >
-                      About
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      class="text-gray-700 transition hover:opacity-75"
-                    >
-                      Meet the Team
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      class="text-gray-700 transition hover:opacity-75"
-                    >
-                      Accounts Review
+                      titanicservicessgr@gmail.com
                     </a>
                   </li>
                 </ul>
@@ -185,25 +162,25 @@ const FooterPart = () => {
                 <ul class="mt-6 space-y-4 text-sm">
                   <li>
                     <a
-                      href="/"
+                      href="/shipping"
                       class="text-gray-700 transition hover:opacity-75"
                     >
-                      Accessibility
+                      Shipping Policy
                     </a>
                   </li>
 
                   <li>
                     <a
-                      href="/"
+                      href="/return"
                       class="text-gray-700 transition hover:opacity-75"
                     >
-                      Returns Policy
+                      Return Policy
                     </a>
                   </li>
 
                   <li>
                     <a
-                      href="/"
+                      href="/refund"
                       class="text-gray-700 transition hover:opacity-75"
                     >
                       Refund Policy
