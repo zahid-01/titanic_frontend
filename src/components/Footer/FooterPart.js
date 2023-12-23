@@ -83,7 +83,9 @@ const FooterPart = () => {
                   <li>
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
                     <a
-                      href="/"
+                      href="https://www.google.com/maps/place/Sgr+1900010,+1308,+Balgarden+-+Nursing+garh+Rd,+opp.+Ahmdiya+Masjid,+Balgarden,+Srinagar,+190010/@34.0765485,74.7975163,150m/data=!3m2!1e3!4b1!4m14!1m7!3m6!1s0x38e18f1f566a0147:0x6fbb5a7a3a6f8d00!2sDigital+Solution+Kashmir!8m2!3d34.0765907!4d74.7981887!16s%2Fg%2F11p67x_f14!3m5!1s0x38e18f3917e8b0c1:0x1667f2dfc6ddde85!8m2!3d34.0765474!4d74.79816!16s%2Fg%2F11r8h6g4zk!5m1!1e1?entry=ttu"
+                      target="_blank"
+                      rel="noreferrer"
                       class="text-gray-700 transition hover:opacity-75"
                     >
                       Mir Mall opposite District Police Lines
