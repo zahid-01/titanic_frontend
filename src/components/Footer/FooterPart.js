@@ -93,19 +93,27 @@ const FooterPart = () => {
                   </li>
 
                   <li>
-                    <FontAwesomeIcon icon={faPhone} className="mr-2" beat />
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="mr-2 text-green-700"
+                      beat
+                    />
                     <a
                       href="tel:9419421934"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-green-700 transition hover:opacity-75 font-semibold"
                     >
                       9419421934
                     </a>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faPhone} className="mr-2" beat />
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="mr-2 text-green-700"
+                      beat
+                    />
                     <a
                       href="tel:7006701866"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-green-700 transition hover:opacity-75 font-semibold"
                     >
                       7006701866
                     </a>
