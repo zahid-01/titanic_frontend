@@ -126,7 +126,7 @@ const FooterPart = () => {
               <div className="tracking-wider">
                 <p class="font-bold text-gray-900">Helpful Links</p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul class="mt-6 space-y-4 text-md">
                   <li>
                     <a
                       href="/"
@@ -159,7 +159,7 @@ const FooterPart = () => {
               <div className="tracking-wider">
                 <p class="font-bold text-gray-900">Legal</p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul class="mt-6 space-y-4 text-md">
                   <li>
                     <a
                       href="/shipping"
