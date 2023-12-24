@@ -1,6 +1,5 @@
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { useState } from "react";
-
 import Filter from "./Filter";
 import axios from "axios";
 import Testimonial from "./Testimonial";
