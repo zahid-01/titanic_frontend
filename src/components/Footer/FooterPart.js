@@ -16,27 +16,29 @@ const FooterPart = () => {
 
   return (
     <>
-      <footer class="bg-white relative">
-        <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <footer className="bg-white relative">
+        <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
-              <div class="text-teal-600">
-                <img src={logo} alt="logo" className="w-24 h-14" />
+              <div className="text-teal-600">
+                <a href="/">
+                  <img src={logo} alt="logo" className="w-24 h-14" />
+                </a>
               </div>
 
-              <p class="mt-4 max-w-xs text-gray-500">
+              <p className="mt-4 max-w-xs text-gray-500">
                 Where Quality meets Excellence
               </p>
 
-              <ul class="mt-8 flex gap-6">
+              <ul className="mt-8 flex gap-6">
                 <li>
                   <a
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-700 transition hover:opacity-75"
                   >
-                    <i class="fa fa-facebook"></i>
+                    <i className="fa fa-facebook"></i>
                   </a>
                 </li>
 
@@ -45,9 +47,9 @@ const FooterPart = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-700 transition hover:opacity-75"
                   >
-                    <i class="fa fa-instagram"></i>
+                    <i className="fa fa-instagram"></i>
                   </a>
                 </li>
 
@@ -56,9 +58,9 @@ const FooterPart = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-700 transition hover:opacity-75"
                   >
-                    <i class="fa fa-twitter"></i>
+                    <i className="fa fa-twitter"></i>
                   </a>
                 </li>
 
@@ -67,26 +69,26 @@ const FooterPart = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-700 transition hover:opacity-75"
                   >
-                    <i class="fa fa-youtube"></i>
+                    <i className="fa fa-youtube"></i>
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
               <div className="tracking-wider col-span-2">
-                <p class="font-bold text-gray-900">Address</p>
+                <p className="font-bold text-gray-900">Address</p>
 
-                <ul class="mt-6 space-y-4 text-md">
+                <ul className="mt-6 space-y-4 text-md">
                   <li>
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
                     <a
                       href="https://www.google.com/maps/place/Sgr+1900010,+1308,+Balgarden+-+Nursing+garh+Rd,+opp.+Ahmdiya+Masjid,+Balgarden,+Srinagar,+190010/@34.0765485,74.7975163,150m/data=!3m2!1e3!4b1!4m14!1m7!3m6!1s0x38e18f1f566a0147:0x6fbb5a7a3a6f8d00!2sDigital+Solution+Kashmir!8m2!3d34.0765907!4d74.7981887!16s%2Fg%2F11p67x_f14!3m5!1s0x38e18f3917e8b0c1:0x1667f2dfc6ddde85!8m2!3d34.0765474!4d74.79816!16s%2Fg%2F11r8h6g4zk!5m1!1e1?entry=ttu"
                       target="_blank"
                       rel="noreferrer"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Mir Mall opposite District Police Lines
                       <br />
@@ -102,7 +104,7 @@ const FooterPart = () => {
                     />
                     <a
                       href="tel:9419421934"
-                      class="text-green-700 transition hover:opacity-75 font-semibold"
+                      className="text-green-700 transition hover:opacity-75 font-semibold"
                     >
                       9419421934
                     </a>
@@ -115,7 +117,7 @@ const FooterPart = () => {
                     />
                     <a
                       href="tel:7006701866"
-                      class="text-green-700 transition hover:opacity-75 font-semibold"
+                      className="text-green-700 transition hover:opacity-75 font-semibold"
                     >
                       7006701866
                     </a>
@@ -125,7 +127,7 @@ const FooterPart = () => {
                     <FontAwesomeIcon icon={faEnvelope} className="mr-2" beat />{" "}
                     <a
                       href="mailto:titanicservicessgr@gmail.com"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       titanicservicessgr@gmail.com
                     </a>
@@ -134,13 +136,13 @@ const FooterPart = () => {
               </div>
 
               <div className="tracking-wider">
-                <p class="font-bold text-gray-900">Helpful Links</p>
+                <p className="font-bold text-gray-900">Helpful Links</p>
 
-                <ul class="mt-6 space-y-4 text-md">
+                <ul className="mt-6 space-y-4 text-md">
                   <li>
                     <a
                       href="/"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Contact
                     </a>
@@ -149,7 +151,7 @@ const FooterPart = () => {
                   <li>
                     <a
                       href="/"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       FAQs
                     </a>
@@ -158,7 +160,7 @@ const FooterPart = () => {
                   <li>
                     <a
                       href="/"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Live Chat
                     </a>
@@ -167,13 +169,13 @@ const FooterPart = () => {
               </div>
 
               <div className="tracking-wider">
-                <p class="font-bold text-gray-900">Legal</p>
+                <p className="font-bold text-gray-900">Legal</p>
 
-                <ul class="mt-6 space-y-4 text-md">
+                <ul className="mt-6 space-y-4 text-md">
                   <li>
                     <a
                       href="/shipping"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Shipping Policy
                     </a>
@@ -182,7 +184,7 @@ const FooterPart = () => {
                   <li>
                     <a
                       href="/return"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Return Policy
                     </a>
@@ -191,7 +193,7 @@ const FooterPart = () => {
                   <li>
                     <a
                       href="/refund"
-                      class="text-gray-700 transition hover:opacity-75"
+                      className="text-gray-700 transition hover:opacity-75"
                     >
                       Refund Policy
                     </a>
