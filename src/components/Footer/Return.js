@@ -1,3 +1,6 @@
+import React from "react";
+import html2pdf from "html2pdf.js";
+
 const ReturnPolicy = () => {
   const returnPolicyText = `
 
@@ -28,24 +31,27 @@ We want you to be completely satisfied with your purchase. If for any reason you
 👉🏻 Once your return is received and inspected, we will process your refund within 5-7 days.
 👉🏻 Refunds will be issued to the original payment method.`;
 
-  const handleExport = () => {
-    const blob = new Blob([returnPolicyText], { type: "text/plain" });
-    const url = window.URL.createObjectURL(blob);
+  const handleExportToPDF = (text, fileName) => {
+    const contentDiv = document.createElement("div");
+    contentDiv.innerHTML = `<pre>${text}</pre>`;
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "ReturnPolicy.txt";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    html2pdf(contentDiv, {
+      margin: 10,
+      filename: fileName,
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    });
   };
 
   return (
-    <div>
+    <div className="border-b p-4">
       <pre>{returnPolicyText}</pre>
-      <button onClick={handleExport} className="font-bold ml-4 mt-4">
-        Download Return Policy
+      <button
+        onClick={() => handleExportToPDF(returnPolicyText, "ReturnPolicy.pdf")}
+        className="font-semibold ml-4 bg-green-500 p-4 mt-4 rounded-full text-white tracking-widest hover:bg-green-600"
+      >
+        Download as PDF
       </button>
     </div>
   );

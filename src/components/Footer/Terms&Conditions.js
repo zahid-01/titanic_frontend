@@ -1,3 +1,6 @@
+import React from "react";
+import html2pdf from "html2pdf.js";
+
 const TermsandConditions = () => {
   const TermsandConditionsText = `
   Terms and Conditions:
@@ -18,25 +21,33 @@ const TermsandConditions = () => {
   5. Contact Information:
   👉🏻 For any inquiries or concerns, please contact us at titanicservicessgr@gmail.com.`;
 
-  const handleExport = () => {
-    const blob = new Blob([TermsandConditionsText], { type: "text/plain" });
-    const url = window.URL.createObjectURL(blob);
+  const handleExportToPDF = (text, fileName) => {
+    const contentDiv = document.createElement("div");
+    contentDiv.innerHTML = `<pre>${text}</pre>`;
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "T&C.txt";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    html2pdf(contentDiv, {
+      margin: 10,
+      filename: fileName,
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    });
   };
 
   return (
     <div>
-      <pre>{TermsandConditionsText}</pre>
-      <button onClick={handleExport} className="font-bold ml-4 mt-4">
-        Download T&C's
-      </button>
+      <div className="border-b p-4">
+        <h2>Terms and Conditions</h2>
+        <pre>{TermsandConditionsText}</pre>
+        <button
+          onClick={() =>
+            handleExportToPDF(TermsandConditionsText, "TermsAndConditions.pdf")
+          }
+          className="font-semibold ml-4 bg-green-500 mt-4 p-4 rounded-full text-white tracking-widest hover:bg-green-600"
+        >
+          Download as PDF
+        </button>
+      </div>
     </div>
   );
 };
