@@ -198,6 +198,14 @@ const FooterPart = () => {
                       Refund Policy
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="/term"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Terms & Conditions
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

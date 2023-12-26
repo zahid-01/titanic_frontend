@@ -23,6 +23,7 @@ import FooterPart from "./components/Footer/FooterPart";
 import RefundPolicy from "./components/Footer/Refund";
 import ShippingPolicy from "./components/Footer/Shipping";
 import ReturnPolicy from "./components/Footer/Return";
+import TermsandConditions from "./components/Footer/Terms&Conditions";
 
 axios.defaults.withCredentials = true;
 
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "/return",
         element: <ReturnPolicy />,
+      },
+      {
+        path: "/term",
+        element: <TermsandConditions />,
       },
     ],
   },
