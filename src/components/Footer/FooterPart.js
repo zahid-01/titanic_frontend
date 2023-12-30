@@ -119,7 +119,7 @@ const FooterPart = () => {
                       href="tel:7006701866"
                       className="text-green-700 transition hover:opacity-75 font-semibold"
                     >
-                      7006701866
+                      7006791866
                     </a>
                   </li>
 
