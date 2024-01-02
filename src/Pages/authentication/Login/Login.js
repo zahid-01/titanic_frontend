@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
-import img from "../../../Assets/Imgs/titanic-logo-3653E95B5B-seeklogo.com.png";
+import img from "../../../Assets/Imgs/logo.jpeg";
 import MotionComponent from "../../../components/Header/Animation";
 
 const Login = () => {
@@ -76,7 +76,11 @@ const Login = () => {
       <MotionComponent>
         <div className="bg-white rounded-lg shadow-md p-6 sm:w-96 w-full">
           <div className="text-center">
-            <img src={img} alt="NorthStar Logo" className="w-32 mx-auto mb-6" />
+            <img
+              src={img}
+              alt="NorthStar Logo"
+              className="w-32 mx-auto mb-6 rounded-lg"
+            />
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Sign-In
             </h3>

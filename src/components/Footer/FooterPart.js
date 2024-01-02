@@ -1,4 +1,4 @@
-import logo from "../../Assets/Imgs/titanic-logo-3653E95B5B-seeklogo.com.png";
+import logo from "../../Assets/Imgs/logo.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowCircleUp,
@@ -22,7 +22,7 @@ const FooterPart = () => {
             <div>
               <div className="text-teal-600">
                 <a href="/">
-                  <img src={logo} alt="logo" className="w-24 h-14" />
+                  <img src={logo} alt="logo" className="w-28 h-18 rounded-lg" />
                 </a>
               </div>
 
@@ -228,9 +228,8 @@ const FooterPart = () => {
           href="developer"
           className="flex items-center justify-center text-lg"
         >
-          Made with{" "}
-          <FontAwesomeIcon icon={faHeart} className="m-1 text-red-500" /> by
-          Developers
+          Developers Link
+          <FontAwesomeIcon icon={faHeart} className="m-1 text-red-500" />
         </a>
       </div>
     </>

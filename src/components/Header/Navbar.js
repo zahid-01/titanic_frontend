@@ -4,7 +4,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import axios from "axios";
 import { loginSliceActions } from "../../Store/loginSlice";
 import { URL } from "../../Assets/environment/url";
-import logo from "../../Assets/Imgs/titanic-logo-3653E95B5B-seeklogo.com.png";
+import logo from "../../Assets/Imgs/logo.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
@@ -36,15 +36,13 @@ const Navbar = () => {
   };
   // sticky top-0 z-50
   return (
-    <div
-      className={`backdrop-blur-md p-2 md:p-4 lg:p-6  shadow-md shadow-blue-200`}
-    >
+    <div className={`backdrop-blur-md p-2 shadow-md shadow-blue-200`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img
             src={logo}
             alt="Logo"
-            className="cursor-pointer w-24 h-12"
+            className="cursor-pointer w-24 h-18 rounded-lg"
             onClick={() => navigate("/")}
           />
         </div>
