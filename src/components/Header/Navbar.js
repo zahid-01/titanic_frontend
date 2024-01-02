@@ -69,7 +69,7 @@ const Navbar = () => {
                 My Orders
               </NavLink>
               <NavLink
-                to="myOrders"
+                to="cart"
                 className="text-black hover:underline font-semibold"
               >
                 Cart

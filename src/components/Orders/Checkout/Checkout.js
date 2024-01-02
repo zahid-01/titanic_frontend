@@ -9,9 +9,9 @@ const Checkout = () => {
   const { state: product } = useLocation();
   const [quantity, setQuantity] = useState(1);
   const subtotal = product.productPrice * quantity;
-  const discount = 0.1;
-  const shipping = 50;
-  const taxPercentage = 0.09;
+  const discount = 0;
+  const shipping = 0;
+  const taxPercentage = 0.0;
 
   const calculatedDiscount = subtotal * discount;
   const calculatedTax =

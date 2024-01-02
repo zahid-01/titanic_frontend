@@ -24,6 +24,7 @@ import RefundPolicy from "./components/Footer/Refund";
 import ShippingPolicy from "./components/Footer/Shipping";
 import ReturnPolicy from "./components/Footer/Return";
 import TermsandConditions from "./components/Footer/Terms&Conditions";
+import ShoppingCart from "./components/Cart/ShoppingCart";
 
 axios.defaults.withCredentials = true;
 
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: "/term",
         element: <TermsandConditions />,
+      },
+      {
+        path: "/cart",
+        element: <ShoppingCart />,
       },
     ],
   },

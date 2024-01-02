@@ -6,8 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MotionComponent from "../Header/Animation";
 import { URL } from "../../Assets/environment/url";
 import { useLoaderData } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartSliceActions } from "../../Store/cartSlice";
 
 const Product = (props) => {
+  const dispatch = useDispatch();
   const { product } = useLoaderData().data;
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,6 +26,25 @@ const Product = (props) => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  async function addTOCartHandler() {
+    const res = await axios({
+      method: "POST",
+      url: `${URL}people/addToCart`,
+      data: {
+        productId: this,
+        count: 1,
+      },
+    });
+
+    if (res.data.status === "Success") {
+      const cart = res.data.newCart.cart;
+      dispatch(
+        cartSliceActions.addItems(res.data.newCart.cart[cart.length - 1])
+      );
+      dispatch(cartSliceActions.setCount(cart.length));
+    }
+  }
 
   return (
     <MotionComponent>
@@ -58,7 +80,10 @@ const Product = (props) => {
               <p className="text-xl font-semibold">
                 &#8377; {product.productPrice}
               </p>
-              <div className="flex space-x-4 ">
+              <div
+                className="flex space-x-4"
+                onClick={addTOCartHandler.bind(product._id)}
+              >
                 <button className="px-4 py-2 bg-green-500 text-white rounded-full tracking-[2px] hover:bg-green-800">
                   Add to Cart
                 </button>
