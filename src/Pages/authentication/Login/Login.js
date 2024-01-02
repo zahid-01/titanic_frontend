@@ -72,9 +72,9 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-t from-green-500 to-white ">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-green-500 to-white ">
       <MotionComponent>
-        <div className="bg-white rounded-lg shadow-md p-6 sm:w-96 w-full">
+        <div className="bg-white rounded-lg shadow-md p-4 sm:w-96 w-full">
           <div className="text-center">
             <img
               src={img}
