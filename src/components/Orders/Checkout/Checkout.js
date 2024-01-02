@@ -4,6 +4,8 @@ import { URL } from "../../../Assets/environment/url";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loginSliceActions } from "../../../Store/loginSlice";
 
 const Checkout = () => {
   const { state: product } = useLocation();
@@ -18,8 +20,14 @@ const Checkout = () => {
     (subtotal - calculatedDiscount + shipping) * taxPercentage;
   const calculatedTotal =
     subtotal - calculatedDiscount + shipping + calculatedTax;
+  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  const dispatch = useDispatch();
 
   function checkOutHandler() {
+    if (!isLoggedIn) {
+      dispatch(loginSliceActions.setLoginPopup(true));
+      return;
+    }
     axios({
       method: "GET",
       url: `${URL}orders/get-checkout-session/${this}`,
@@ -109,11 +117,19 @@ const Checkout = () => {
           <div className="text-center">
             <button
               onClick={checkOutHandler.bind(product._id)}
-              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg inline-flex items-center"
+              className={`bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg inline-flex items-center ${
+                isLoggedIn ? "" : "cursor-not-allowed opacity-50"
+              }`}
+              disabled={!isLoggedIn}
             >
               Place Order
               <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
             </button>
+            {!isLoggedIn && (
+              <p className="mt-2 text-red-500">
+                Please log in to place an order.
+              </p>
+            )}
           </div>
         </div>
       </div>
