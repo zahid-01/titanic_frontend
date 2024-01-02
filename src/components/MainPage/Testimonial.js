@@ -29,16 +29,16 @@ const Testimonial = () => {
                   </div>
 
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
-                    Paul Starr
+                    Basit
                   </p>
                 </div>
               </div>
 
               <p className="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
-                quia obcaecati neque quibusdam eius accusamus error officiis
-                atque voluptates magnam!
+                Efficient and Reliable: <br />
+                "The printer has transformed our daily operations. The speed,
+                quality, and reliability make them indispensable tools for our
+                team. Highly recommended!"
               </p>
             </blockquote>
 
@@ -60,16 +60,17 @@ const Testimonial = () => {
                   </div>
 
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
-                    Paul Starr
+                    Zahid
                   </p>
                 </div>
               </div>
 
               <p className="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
-                quia obcaecati neque quibusdam eius accusamus error officiis
-                atque voluptates magnam!
+                Sleek and Powerful:
+                <br />
+                "The photocopier from Titanic Services not only look sleek in
+                our office but also deliver exceptional performance. Fast,
+                user-friendly, and a game-changer for our document management."
               </p>
             </blockquote>
 
@@ -91,16 +92,17 @@ const Testimonial = () => {
                   </div>
 
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
-                    Paul Starr
+                    Mateen
                   </p>
                 </div>
               </div>
 
               <p className="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-                sit rerum incidunt, a consequuntur recusandae ab saepe illo est
-                quia obcaecati neque quibusdam eius accusamus error officiis
-                atque voluptates magnam!
+                Top-notch Quality:
+                <br />
+                "Impressed with the outstanding print quality and reliability of
+                the printer and photocopier. They have become essential to our
+                workflow, ensuring professional results every time."
               </p>
             </blockquote>
           </div>
