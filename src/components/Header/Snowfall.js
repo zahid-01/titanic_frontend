@@ -3,7 +3,7 @@ import "./Snowfall.css";
 
 const Snowfall = () => {
   useEffect(() => {
-    const snowflakesCount = 500;
+    const snowflakesCount = 100;
 
     for (let i = 0; i < snowflakesCount; i++) {
       const snowflake = document.createElement("div");
