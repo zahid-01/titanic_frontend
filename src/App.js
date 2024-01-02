@@ -25,6 +25,7 @@ import ShippingPolicy from "./components/Footer/Shipping";
 import ReturnPolicy from "./components/Footer/Return";
 import TermsandConditions from "./components/Footer/Terms&Conditions";
 import ShoppingCart from "./components/Cart/ShoppingCart";
+import { cartSliceActions } from "./Store/cartSlice";
 
 axios.defaults.withCredentials = true;
 
@@ -115,6 +116,8 @@ function App() {
           if (res.status === 200) {
             dispatch(loginSliceActions.setLogin(true));
             dispatch(loginSliceActions.setUserInfo(res.data.userData));
+            dispatch(cartSliceActions.setItems(res.data.userData.cart));
+            dispatch(cartSliceActions.setCount(res.data.userData.cart.length));
           } else {
             dispatch(loginSliceActions.setLogin(false));
             dispatch(loginSliceActions.setUserInfo(null));
