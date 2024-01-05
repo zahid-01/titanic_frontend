@@ -1,11 +1,14 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { URL } from "../../../Assets/environment/url";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { loginSliceActions } from "../../../Store/loginSlice";
+import { useSelector } from "react-redux";
+
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 const Checkout = () => {
   const { state: product } = useLocation();
@@ -21,11 +24,13 @@ const Checkout = () => {
   const calculatedTotal =
     subtotal - calculatedDiscount + shipping + calculatedTax;
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
-  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   function checkOutHandler() {
     if (!isLoggedIn) {
-      dispatch(loginSliceActions.setLoginPopup(true));
+      setShowLoginPopup(true);
       return;
     }
     axios({
@@ -117,22 +122,42 @@ const Checkout = () => {
           <div className="text-center">
             <button
               onClick={checkOutHandler.bind(product._id)}
-              className={`bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg inline-flex items-center ${
-                isLoggedIn ? "" : "cursor-not-allowed opacity-50"
-              }`}
-              disabled={!isLoggedIn}
+              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg inline-flex items-center "
             >
               Place Order
               <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
             </button>
-            {!isLoggedIn && (
-              <p className="mt-2 text-red-500">
-                Please log in to place an order.
-              </p>
-            )}
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={showLoginPopup}
+        onRequestClose={() => setShowLoginPopup(false)}
+        contentLabel="Login Popup"
+        className="modal-content"
+        overlayClassName="modal-overlay fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-40"
+      >
+        <div className="modal-container bg-gradient-to-r from-green-300 to-white  w-96 p-6 rounded-xl">
+          <div className="modal-header flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold">Login Required</h2>
+            <button
+              className="text-gray-700 hover:text-gray-900 cursor-pointer"
+              onClick={() => setShowLoginPopup(false)}
+            >
+              <FontAwesomeIcon icon={faClose} className="w-8 h-6" />
+            </button>
+          </div>
+          <div className="modal-body text-center mb-4 tracking-wider">
+            <p className="p-4">Please log in to proceed.</p>
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 tracking-wider"
+              onClick={() => navigate("/login")}
+            >
+              Go to Login
+            </button>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };
